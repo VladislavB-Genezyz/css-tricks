@@ -1,0 +1,101 @@
+.container
+	// width: 99vw;
+	width: 100%;
+	height: 150vh;
+	background-color: #bababa;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+
+
+
+	button
+		padding: 30px 80px;
+		background: linear-gradient(to right, rgba(59,103,158,1) 0%,rgba(32,124,202,1) 21%,rgba(43,136,217,1) 49%,rgba(32,124,202,1) 68%,rgba(125,185,232,1) 100%);
+		box-shadow: inset 0px 0px 30px 10px #5e33d6;
+		border: none;
+		border-radius: 5px;
+		// animation: pulse 3s infinite linear;
+		position: relative;
+		span.text
+			transition: all 1s;
+
+		&:hover
+			// transform: scale(2);
+
+			span.text
+				box-shadow:  0px 0px 10px 5px #ba6aba;
+				background-color: #42e3ffab;
+				font-size: 1.2em;
+				padding: 5px;
+			span:not(.text)
+				position: absolute;
+
+				&:first-of-type
+					left: 0;
+					top: 0;
+					background-color: #60167f;
+					// width: 100%;
+					height: 6%;
+					animation: direct-x 1s linear forwards;
+					border-top-left-radius: 3px;
+					border-top-right-radius: 3px;
+				&:nth-of-type(2)
+					right : 0;
+					top:0;
+					width: 3%;
+					// height: 100%;
+					background-color: #60167f;
+					animation: direct-y .5s linear forwards;
+					border-top-right-radius: 3px;
+					border-bottom-right-radius: 3px;
+					animation-delay: .9s;
+				&:nth-of-type(3)
+					right : 0;
+					bottom: 0
+					// width: 100%;
+					height: 6%;
+					background-color: #60167f;
+					animation: direct-x 1s linear forwards;
+					border-bottom-left-radius: 3px;
+					border-bottom-right-radius: 3px;
+					animation-delay: 1.3s;
+				&:nth-of-type(4)
+					left : 0;
+					bottom: 0;
+					width: 3%;
+					// height: 100%;
+					background-color: #60167f;
+					animation: direct-y .5s linear forwards;
+					border-top-left-radius: 3px;
+					border-bottom-left-radius: 3px;
+					animation-delay: 2.3s;
+
+@keyframes direct-x
+	0%
+		width: 0%
+		
+	100%
+		
+		width: 100%
+@keyframes direct-y
+	0%
+		height: 0%
+	100%
+		height: 100%
+@keyframes pulse
+	0%
+		transform: rotate(0deg);
+		
+	25%
+		transform: rotate(5deg);
+		
+	75%
+		transform: rotate(-5deg);
+		
+		
+	100%
+		transform: otate(0deg);
+		
+
