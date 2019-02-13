@@ -1,0 +1,50 @@
+.container
+	width: 100vw;
+	position: relative;
+	
+	.img
+		height: calc(100vh - 50px);
+		width: 100vw;
+		background-image: url('/images/mix-blend1.jpg')
+		background-size: cover;
+		background-repeat: no-repeat;
+
+
+	ul
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		bottom: 0;
+		top: 100%;
+		width: 100%;
+		height: 50px;
+		display: flex;
+		flex-direction: row;
+		background-color: red;
+		li
+			position: relative;
+			list-style:none;
+			width :20%;
+			height: 100%;
+			mix-blend-mode: hue;
+			&:nth-child(1)
+				background: red;
+			&:nth-child(2)
+				background: green;
+			&:nth-child(3)
+				background: blue;
+			&:nth-child(4)
+				background: #8e1686;
+			&:nth-child(5)
+				background: #64b740;
+			&:hover:nth-child(1)
+				box-shadow: 0 0 0 1500px red;
+			&:hover:nth-child(2)
+				// width: 100%;
+				box-shadow: 0 0 0 1500px green;
+			&:hover:nth-child(3)
+				box-shadow: 0 0 0 1500px blue;
+			&:hover:nth-child(4)
+				box-shadow: 0 0 0 1500px #8e1686;
+			&:hover:nth-child(5)
+				box-shadow: 0 0 0 1500px #64b740;
