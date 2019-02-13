@@ -2,7 +2,7 @@
 .container
 	width: 100vw;
 	height: 100vh;
-	background-color: #bababa;
+	background-color: #524949;
 
 .cardWrap
 	perspective: 1000px;
@@ -29,27 +29,47 @@
 			width: 100%;
 			height: 100%;
 			backface-visibility: hidden;
+			background-color: #6d3f1d;
+			color: #dea4a4;
 		&__front
 			text-align: center;
 			z-index: 2;
 			border: 1px double red;
 			font-size: 100%;
 			h2
-				color: #749b7b;
+				color: #53f370;
 				font-size: 80%;
 			span
 				font-size: 85%;
 			h1
-				font-size: 90%;		
+				display: inline-block;
+				font-size: 90%;	
+				color: #09d0b7;
+				animation: color 10s ease infinite;
+				background-color: #af6746;
+				transition: all 2s;
+				&:hover
+					cursor: pointer;
+					margin-left: 10px;
+					margin-top: 10px;
+					
 		&__back
 			transform: rotateY(180deg);
 			z-index: 1;
 			border: 2px double green;
+			position: relative;
 			a
 				width: 100%
 				height: 100%
 				background-color: red;
 				display: block
+				font-size: 40px;
+				text-decoration: none;
+			// .hoverText
+			// 	position: absolute;
+			// 	left: 0;
+			// 	top: 0;
+				
 	
 .cardWrapHide
 	animation: scaleHide 2.5s ease forwards
@@ -96,3 +116,40 @@
 		right: 20%;
 	100%
 		right: 0;
+		
+
+
+@keyframes color
+	0%
+		color: #c16161;
+		box-shadow: 0 0 10px 5px #482222
+	10%
+		color: #c11f1f;
+		box-shadow: 0 0 5px 5px #631212
+	20%
+		color: #d40000;
+		box-shadow: 0 0 10px 5px #6d0808
+	30%
+		color: #d47900;
+		box-shadow: 0 0 5px 5px #9c6823
+	40%
+		color: #d4c700;
+		box-shadow: 0 0 10px 5px #807800
+	50%
+		color: #4ed400;
+		box-shadow: 0 0 5px 5px #215602
+	60%
+		color: #3b8610;
+		box-shadow: 0 0 10px 5px #1f400d
+	70%
+		color: #103286;
+		box-shadow: 0 0 5px 5px #0a225d
+	80%
+		color: #9d4dff;
+		box-shadow: 0 0 10px 5px #5f2d9c
+	90%
+		color: #ff4d94;
+		box-shadow: 0 0 5px 5px #8a234c
+	100%
+		color: #ff4040;
+		box-shadow: 0 0 10px 5px #a02020

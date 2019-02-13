@@ -1,0 +1,27 @@
+.container
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #000;
+	
+	.text
+		span
+			// color: #fff
+			position: relative;
+			font-size: 55px;
+			overflow: hidden;
+			background: linear-gradient(45deg,#a92d2d,#fff,#5dda36);
+			background-repeat: no-repeat;
+			background-size: 80%;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			animation: animate 3s linear infinite;
+			
+
+@keyframes animate
+	0%
+		background-position: -500%;
+	100%
+		background-position: 500%; 

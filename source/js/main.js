@@ -1,7 +1,7 @@
 window.onload = ()=>{
+	try{
 	let close = document.getElementsByClassName('close')[0];
 	let show = document.getElementsByClassName('show')[0];
-	console.log(close);
 
 	close.addEventListener('click',()=>{
 			document.getElementsByClassName('cardWrap')[0].classList.remove("cardWrapShow");
@@ -15,4 +15,7 @@ window.onload = ()=>{
 		document.getElementsByClassName('card')[0].classList.remove('cardHide')
 		document.getElementsByClassName('card')[0].classList.add("cardShow");
 	})
+	}catch(e){
+		console.log(`Error ${e}`);
+	}
 }

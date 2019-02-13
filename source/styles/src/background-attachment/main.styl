@@ -1,0 +1,91 @@
+body::-webkit-scrollbar 
+	width: 1em;
+
+
+body::-webkit-scrollbar-track 
+	-webkit-box-shadow:  -10px 0 6px rgba(0,0,0,0.3);
+	background: #d3f8ff;
+	
+
+
+body::-webkit-scrollbar-thumb 
+	border-radius: 3px;
+	outline: 1px solid slategrey;
+	// box-shadow: inset 0 0 10px 5px #c97070;
+	background-image: -webkit-linear-gradient(top left, rgba(125,185,232,1) 0%, rgba(41,137,216,1) 32%, rgba(32,124,202,1) 60%, rgba(32,124,202,1) 60%, rgba(30,87,153,1) 100%)
+	border: 1px solid #6bbdd3;
+
+	
+// body::-scrollbar-button
+// 	border-radius: 5px;
+
+.container
+	// width: 100vw;
+	overflow: hidden;
+
+.sect1
+	background-image: url('/images/ocean1.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	overflow: hidden;
+	&:before
+		content: ''
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: -50%;
+		top: 100%;
+		background-color: #d7f3ff;
+		transform-origin: right;
+		transform: skewY(10deg);
+	&:after
+		content: ''
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		right: -50%;
+		top: 100%;
+		background-color: #d7f3ff;
+		transform-origin: left;
+		transform: skewY(-10deg);
+		
+.sect2
+	width: 100vw;
+	// padding: 10%;
+	background-color: #d7f3ff;
+	span
+		color: #0c1a2f;
+		display: block;
+		max-width: 1400px;
+		margin: 0 auto;
+.sect3
+	background-image: url('/images/ocean2.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	overflow: hidden;
+	&:before
+		content: '';
+		position: absolute;
+		top: 0%;
+		left: 15vw;
+		width: 0;
+		height: 0;
+		border-top: 130px solid #d7f3ff; 
+		border-left: 650px solid transparent;
+	&:after
+		content: '';
+		position: absolute;
+		top: 0%;
+		right: 15vw;
+		width: 0;
+		height: 0;
+		border-top: 130px solid #d7f3ff; 
+		border-right: 650px solid transparent;
