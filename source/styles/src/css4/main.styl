@@ -1,0 +1,18 @@
+
+p:has(a)
+	color: red;
+a:any-link
+	font-size 25px;
+	
+:not(p, span)
+	border: 2px solid red;
+
+input:placeholder-shown
+	outline: 1px solid red;
+
+// div:drop
+
+// div:drop(active || valid || invalid) 
+// 	// active: перетаскиваемый объект
+// 	// valid: сработает, если цель перетаскивания действительна для объекта, который в настоящее время перетаскивается
+// 	// invalid: наоборот, если цель перетаскивания недействительная для объекта, который в настоящее время перетаскивается

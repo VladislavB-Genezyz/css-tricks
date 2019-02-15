@@ -34,7 +34,7 @@
 		&__front
 			text-align: center;
 			z-index: 2;
-			border: 1px double red;
+			// border: 1px double red;
 			font-size: 100%;
 			h2
 				color: #53f370;
@@ -56,7 +56,7 @@
 		&__back
 			transform: rotateY(180deg);
 			z-index: 1;
-			border: 2px double green;
+			// border: 2px double green;
 			position: relative;
 			a
 				width: 100%
@@ -65,14 +65,36 @@
 				display: block
 				font-size: 40px;
 				text-decoration: none;
-			// .hoverText
-			// 	position: absolute;
-			// 	left: 0;
-			// 	top: 0;
-				
-	
+			.hoverText
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom 0px;
+				right 0px;
+				// display: none;
+				opacity: 0;
+				z-index: 1;
+				transition: all 1.5s;
+				background-color: green;
+				transform: rotateX(180deg)
+			&:hover .hoverText
+				display: block
+				transform-origin: top center;
+				animation: hoverText 1s ease forwards
+@keyframes hoverText
+	0%
+		// transform-origin: center top;
+		transform: rotateX(90deg)
+	50%
+		transform: rotateX(90deg)
+		
+		opacity: 0.5;
+	100%
+		opacity: 1;
+		transform: translateX(100%)  rotateX(0deg)
 .cardWrapHide
 	animation: scaleHide 2.5s ease forwards
+	
 .cardHide
 	animation: rotHide 2.5s ease forwards
 
@@ -87,7 +109,7 @@
 	50%
 		transform: scale(.8) rotateY(90deg);
 	100%
-		transform: scale(.6) rotateY(180deg);
+		transform: scale(1) rotateY(180deg);
 
 @keyframes scaleHide
  		
@@ -99,6 +121,7 @@
 		width: 150px;
 		height: 80px;
 		right: 100%;
+		left: 0%;
 		
 @keyframes rotShow
 	0%
